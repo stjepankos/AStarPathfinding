@@ -62,11 +62,12 @@ public class Frame extends JPanel
 
     public void paintComponent(Graphics g){
 
+        super.paintComponent(g);
         //Updates control position
         controls.allPosition();
 
         // Draws and updates info text
-        super.paintComponent(g);
+
         if (pathfinder.isSolved()) {
             if (!showSteps) {
                 controls.getL("finishText").setText("Completed in " + finalTime + "ms");
@@ -152,6 +153,7 @@ public class Frame extends JPanel
         }
             showSteps = controls.getC("showStepsCheck").isSelected();
             showInfo = controls.getC("showInfoCheck").isSelected();
+            infoChange = controls.getC("showInfoCheck").isSelected();
 
         controls.addAll();
     }
@@ -256,7 +258,6 @@ public class Frame extends JPanel
             infoChange2=!infoChange2;
             repaint();
         }
-        infoChange=controls.getC("showInfoCheck").isSelected();
     }
 
 
