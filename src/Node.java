@@ -1,5 +1,3 @@
-import javax.swing.*;
-import java.util.ArrayList;
 
 public class Node {
     /**
@@ -61,6 +59,7 @@ public class Node {
     public void setY(int y) {
         this.y = y;
     }
+
     public static boolean isEqual(Node s, Node e) {
         return s.getX() == e.getX() && s.getY() == e.getY();
     }

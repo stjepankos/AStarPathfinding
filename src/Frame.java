@@ -155,7 +155,6 @@ public class Frame extends JPanel
             showInfo = controls.getC("showInfoCheck").isSelected();
             infoChange = controls.getC("showInfoCheck").isSelected();
 
-        controls.addAll();
     }
     public void MapCalculations(MouseEvent e) {
         //if left mouse button is pressed
@@ -163,6 +162,7 @@ public class Frame extends JPanel
             int mouseBoxLX = e.getX() - (e.getX() % size);
             int mouseBoxLY = e.getY() - (e.getY() % size);
             if (currentKey == 's') {
+                pathfinder.reset();
                 if (startNode == null) {
                     startNode = new Node(mouseBoxLX, mouseBoxLY);
                 } else {
@@ -171,6 +171,7 @@ public class Frame extends JPanel
                 }
                 repaint();
             } else if (currentKey == 'e') {
+                pathfinder.reset();
                 if (endNode == null) {
                     endNode = new Node(mouseBoxLX, mouseBoxLY);
                 } else {

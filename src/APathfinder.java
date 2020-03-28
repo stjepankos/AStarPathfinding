@@ -44,15 +44,16 @@ public class APathfinder {
     public void solve(){
             Node current = getLowest();
             openList.remove(current);
-            closedList.add(current);
+
             if (current==null){                   //if no more openNodes then there's no path
                 System.out.println("END No path");
                 setRunning(false);
                 setSolved(false);
                 setNoPath(true);
-                closedList.remove(current);
                 return;
-            }
+        }
+            closedList.add(current);
+
             if (Node.isEqual(current,End)){   //if current Node == End Node, finishes.
                 retracePath(current);
                 setSolved(true);
@@ -273,9 +274,6 @@ public class APathfinder {
         this.notSet = notSet;
     }
 
-    public boolean isDiagonal() {
-        return diagonal;
-    }
 
     public void setDiagonal(boolean diagonal) {
         this.diagonal = diagonal;
