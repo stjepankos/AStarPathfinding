@@ -1,7 +1,7 @@
 # AStarPathfinding
 
 > A viusal representation how A* (star) algorithm is used to find the shortest path between two places.
-
+---
 ## Controls
 - **Setup:**
   - **Set Start:** Hold S + Left Mouse Click
@@ -13,7 +13,7 @@
    - **Press r** to reset
    - **Press w** to remove walls
    - **Press q** to pause
-
+---
 ## Bottom left controls
   - **Steps:** 
       - if checked, goes step by step how the algorithm works
@@ -24,3 +24,4 @@
        - Choose if diagonal movement is allowed
   - **Speed Slider:** 
       - Adjust the speed of the algorithm (Only works if "Steps" box is checked)
+---
